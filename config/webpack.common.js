@@ -10,7 +10,8 @@ module.exports = {
    * The first place Webpack looks to start building the bundle.
    */
   entry: {
-    main: paths.src + '/index.js',
+    main: paths.src + '/index.ts',
+    style: paths.src + '/styles/index.scss',
   },
 
   /**
@@ -55,7 +56,7 @@ module.exports = {
      * Generates an HTML file from a template.
      */
     new HtmlWebpackPlugin({
-      title: 'Webpack Boilerplate',
+      title: 'webpack-typescript',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/template.html', // template file
       filename: 'index.html', // output file
@@ -78,6 +79,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
+      },
+
+      {
+        test: /\.(.tsx|.ts)$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       },
 
       /**

@@ -4,7 +4,7 @@
   "description": "Webpack 4 Boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },
   "keywords": [
@@ -14,7 +14,7 @@
     "boilerplate",
     "hmr"
   ],
-  "author": "Tania Rascia <tania@taniarascia.com>",
+  "author": "Zack",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -39,6 +39,8 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.4.1",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
